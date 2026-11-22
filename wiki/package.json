@@ -9,12 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fumadocs/local-md": "^0.5.1",
     "fumadocs-core": "^16.19.5",
     "fumadocs-mdx": "^15.6.4",
     "fumadocs-ui": "npm:@fumadocs/base-ui@^16.19.5",
     "next": "16.4.6",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "shiki": "^4.6.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",

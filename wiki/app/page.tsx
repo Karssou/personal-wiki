@@ -1,8 +1,7 @@
-export default function Home() {
+export default async function Home() {
   return (
     <section>
-      <h1>Salut les petits chats</h1>
-
+      <h1>salut toi</h1>
     </section>
   );
 }
