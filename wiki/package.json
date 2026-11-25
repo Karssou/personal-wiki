@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@fumadocs/local-md": "^0.5.1",
+    "@iconify/react": "^6.0.4",
     "fumadocs-core": "^16.19.5",
     "fumadocs-mdx": "^15.6.4",
+    "fumadocs-obsidian": "^1.2.3",
     "fumadocs-ui": "npm:@fumadocs/base-ui@^16.19.5",
     "next": "16.4.6",
     "react": "19.3.0",

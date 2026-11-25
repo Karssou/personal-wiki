@@ -1,9 +1,11 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
+
 export function baseOptions(): BaseLayoutProps {
   return {
+    githubUrl: "https://github.com/Karssou",
     nav: {
-      title: "Mon application je sais pas",
-    },
+      title: "Alexandre LARUE Docs",
+    }, 
   };
 }
