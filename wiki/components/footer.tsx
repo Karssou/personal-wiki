@@ -26,9 +26,11 @@ export default async function Footer() {
           </ul>
         </div>
       </section>
-      <section className="text-sm text-muted w-full flex flex-row justify-between">
-        <Link href="/legal-mention">Mentions légales</Link>
-        <span>Made with NextJS & Fumadocs</span>
+      <section className="text-muted w-full flex flex-row justify-between">
+        <Link className="text-sm" href="/legal-mention">
+          Mentions légales
+        </Link>
+        <span className="text-sm">Made with NextJS & Fumadocs</span>
       </section>
     </footer>
   );

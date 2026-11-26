@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { ReactNode } from "react";
 
 export default async function Socials() {
@@ -51,7 +50,7 @@ export default async function Socials() {
         {items.map((item) => (
           <li
             key={item.key}
-            className="flex items-center rounded-full px-2.5 py-2.5 transition-all duration-200 ease-out hover:bg-bg-hovered hover:shadow-md"
+            className="flex items-center text-foreground rounded-full px-2.5 py-2.5 transition-all duration-200 ease-out hover:bg-bg-hovered hover:shadow-md"
           >
             <a href={item.href} className="flex items-center">
               {item.icon}

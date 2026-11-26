@@ -5,21 +5,41 @@
 @import "fumadocs-obsidian/css/preset.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f8f8;
+  --surface: #ffffff;
+  --foreground: #111111;
+  --text-muted: #6b7280;
   --footer: #efefef;
   --primary: #ff9d00;
+  --border-default: rgba(0, 0, 0, 0.08);
 }
 
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-}
-
-@theme {
+  --color-primary: var(--primary);
+  --color-surface: var(--surface);
   --color-footer: var(--footer);
+  --color-text-default: var(--text-default);
+  --color-text-muted: var(--text-muted);
+  --color-border-default: var(--border-default);
+  --color-bg-hovered: var(--bg-hovered);
+
+  --animate-slide-up: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +47,17 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --footer: #0d0d0d;
+    --surface: #111111;
+    --text-muted: #9ca3af;
+    --border-default: rgba(255, 255, 255, 0.08);
+    --bg-hovered: rgba(255, 255, 255, 0.08);
+    --text-hovered: #ffffff;
   }
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 #nd-docs-layout #nd-subnav {
