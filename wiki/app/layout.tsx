@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
+import Socials from "@/components/socials";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex flex-col min-h-screen">
         {children}
+        <section
+          className="fixed bottom-6 inset-x-0 mx-auto w-full max-w-fit z-50"
+          id="social"
+        >
+          <Socials />
+        </section>
         <Footer />
       </body>
     </html>

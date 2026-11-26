@@ -1,9 +1,9 @@
+import Socials from "@/components/socials";
+
 export default async function Home() {
   return (
-    <section>
-      <h1>salut toi</h1>
-    </section>
+    <main className="w-screen h-screen">
+      <h1>Titre</h1>
+    </main>
   );
 }
-
-
