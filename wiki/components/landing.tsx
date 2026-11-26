@@ -1,34 +1,6 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
-interface TopicPreview {
-  title: string;
-  tag: string;
-  href: string;
-  icon: string;
-}
-
-const featuredTopics: TopicPreview[] = [
-  {
-    title: "Architecture & Next.js",
-    tag: "Full-Stack",
-    href: "/docs",
-    icon: "material-symbols:layers-outline-rounded",
-  },
-  {
-    title: "Snippets & Bonnes pratiques",
-    tag: "Dev",
-    href: "/docs",
-    icon: "material-symbols:code-blocks-outline-rounded",
-  },
-  {
-    title: "Notes de cours & Projets EPSI",
-    tag: "Wiki",
-    href: "/docs",
-    icon: "material-symbols:menu-book-outline-rounded",
-  },
-];
-
 export default async function LandingPage() {
   return (
     <section
