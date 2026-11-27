@@ -31,7 +31,8 @@ export default async function Navbar() {
             width="40"
             height="40"
             loading="eager"
-            priority={true}
+            priority
+            preload
             decoding="async"
             className="size-10 object-contain"
           />
