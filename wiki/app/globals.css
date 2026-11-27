@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/black.css";
 @import "fumadocs-ui/css/preset.css";
 @import "fumadocs-obsidian/css/preset.css";
 
 :root {
+  color-scheme: light;
+  --font-stack-sans-headline: Arial, Helvetica, sans-serif;
+  --font-lato: Arial, Helvetica, sans-serif;
+
   --background: #f8f8f8;
   --surface: #ffffff;
   --foreground: #111111;
-  --text-muted: #6b7280;
-  --footer: #efefef;
+  --text-muted: #5f6368;
+  --footer: #eeeeee;
   --primary: #ff9d00;
+  --primary-foreground: #111111;
   --border-default: rgba(0, 0, 0, 0.08);
+  --bg-hovered: rgba(0, 0, 0, 0.06);
+  --text-default: var(--foreground);
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --fot-title: var(--font-stack-sans-headline), sans-serif;
+  --font-sans: var(--font-lato), sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --color-surface: var(--surface);
   --color-footer: var(--footer);
   --color-text-default: var(--text-default);
@@ -28,7 +36,7 @@
   --color-border-default: var(--border-default);
   --color-bg-hovered: var(--bg-hovered);
 
-  --animate-slide-up: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-slide-up: slide-up 2s cubic-bezier(0.16, 1, 0.3, 1) both;
 
   @keyframes slide-up {
     from {
@@ -40,30 +48,45 @@
       transform: translateY(0) scale(1);
     }
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --footer: #0d0d0d;
-    --surface: #111111;
-    --text-muted: #9ca3af;
-    --border-default: rgba(255, 255, 255, 0.08);
-    --bg-hovered: rgba(255, 255, 255, 0.08);
-    --text-hovered: #ffffff;
+  --animate-slide-down: slide-down 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-24px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }
 
+/* Keep the application theme in sync with Fumadocs' .dark class. */
+.dark {
+  color-scheme: dark;
+
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --footer: #0d0d0d;
+  --surface: #111111;
+  --text-muted: #9ca3af;
+  --primary-foreground: #111111;
+  --border-default: rgba(255, 255, 255, 0.08);
+  --bg-hovered: rgba(255, 255, 255, 0.08);
+  --text-default: var(--foreground);
+}
+
 body {
+  min-height: 100%;
   background: var(--background);
   color: var(--foreground);
 }
 
-#nd-docs-layout #nd-subnav {
-  background-color: purple;
-}
-
+#nd-docs-layout #nd-subnav,
 [data-toc-popover] {
-  background-color: purple;
+  background-color: var(--color-fd-background);
+  color: var(--color-fd-foreground);
+  border-color: var(--color-fd-border);
 }

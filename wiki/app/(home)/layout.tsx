@@ -1,4 +1,5 @@
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import Socials from "@/components/socials";
 
 export default function HomeLayout({
@@ -8,6 +9,9 @@ export default function HomeLayout({
 }) {
   return (
     <>
+      <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8 animate-slide-down">
+        <Navbar />
+      </header>
       <div className="fixed top-0 right-0 w-1/2 min-h-200 text-primary h-screen opacity-40 pointer-events-none z-0">
         <svg
           className="w-full h-full text-primary transition-colors duration-300"
@@ -22,7 +26,7 @@ export default function HomeLayout({
             y1="100"
             y2="0"
           ></line>
-          <line   
+          <line
             stroke="currentColor"
             strokeWidth="0.2"
             x1="0"

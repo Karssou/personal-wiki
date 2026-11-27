@@ -28,7 +28,7 @@ export default async function LandingPage() {
           <div className="animate-slide-up [animation-delay:300ms] flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto pt-2">
             <Link
               href="/docs"
-              className="group uppercase font-bold inline-flex items-center justify-center gap-2.5 text-sm w-full sm:w-fit px-6 py-3.5 rounded-full bg-primary text-black shadow-[0px_0px_25px_0px] shadow-primary/30 hover:shadow-primary/55 hover:brightness-105 transition-all duration-300"
+              className="group uppercase font-bold inline-flex items-center justify-center gap-2.5 text-sm w-full sm:w-fit px-6 py-3.5 rounded-full bg-primary text-primary-foreground shadow-[0px_0px_25px_0px] shadow-primary/30 hover:shadow-primary/55 hover:brightness-105 transition-all duration-300"
             >
               Explorer la doc
               <Icon

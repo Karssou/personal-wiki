@@ -1,15 +1,7 @@
-import { getSource } from "@/lib/source";
-import { DocsLayout } from "fumadocs-ui/layouts/docs";
-import { baseOptions } from "@/lib/layout.shared";
+import type { ReactNode } from "react";
 
-export const instant = false;
-
-export default async function Layout({ children }: LayoutProps<"/docs">) {
-  const source = await getSource();
-
-  return (
-    <DocsLayout tree={source.getPageTree()} {...baseOptions()}>
-      {children}
-    </DocsLayout>
-  );
+// Each section owns its DocsLayout. Keeping this parent layout neutral prevents
+// the two sidebars from being nested into one another.
+export default function Layout({ children }: { children: ReactNode }) {
+  return children;
 }
