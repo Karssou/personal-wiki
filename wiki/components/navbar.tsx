@@ -30,10 +30,7 @@ export default async function Navbar() {
             alt="Alexandre Larue - Logo"
             width="40"
             height="40"
-            loading="eager"
-            priority
             preload
-            decoding="async"
             className="size-10 object-contain"
           />
         </div>
